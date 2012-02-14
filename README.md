@@ -11,7 +11,8 @@ View the included example project for a demonstration.
 To use DAReloadActivity:
 
 1 - Copy over the `DAReloadActivity` folder to your project folder.
-2 - Allocate, Initialize.
+2 - Make sure that your project includes the QuartzCore.framework.
+3 - Allocate, Initialize.
 Optional - Customize.
 
 ## Usage
