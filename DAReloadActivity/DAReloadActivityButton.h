@@ -10,7 +10,7 @@
 
 @interface DAReloadActivityButton : UIButton
 {
-    BOOL animating;
+    BOOL _animating;
 }
 @property (nonatomic) CGFloat animationDuration;
 

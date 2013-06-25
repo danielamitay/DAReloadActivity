@@ -11,7 +11,7 @@
 
 @implementation DAReloadActivityButton
 
-@synthesize animationDuration =_animationDuration;
+@synthesize animationDuration = _animationDuration;
 
 #pragma mark - Init Methods
 
@@ -19,8 +19,7 @@
 {
     self = [super initWithFrame:CGRectMake(0, 0, 28, 28)];
     if (self) {
-        self.showsTouchWhenHighlighted = YES;
-        [self setBackgroundImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
+        [self sharedSetup];
     }
     return self;
 }
@@ -29,8 +28,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.showsTouchWhenHighlighted = YES;
-        [self setBackgroundImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
+        [self sharedSetup];
     }
     return self;
 }
@@ -39,10 +37,15 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.showsTouchWhenHighlighted = YES;
-        [self setBackgroundImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
+        [self sharedSetup];
     }
     return self;
+}
+
+- (void)sharedSetup {
+    self.showsTouchWhenHighlighted = YES;
+    UIImage *reloadImage = [UIImage imageNamed:@"reload"];
+    [self setBackgroundImage:reloadImage forState:UIControlStateNormal];
 }
 
 #pragma mark - Public Methods
@@ -50,18 +53,18 @@
 - (BOOL)isAnimating
 {
     CAAnimation *spinAnimation = [self.layer animationForKey:@"spinAnimation"];
-    return (animating || spinAnimation);
+    return (_animating || spinAnimation);
 }
 
 - (void)startAnimating
 {
-    animating = YES;
+    _animating = YES;
     [self spin];
 }
 
 - (void)stopAnimating
 {
-    animating = NO;
+    _animating = NO;
 }
 
 - (void)spin
@@ -77,7 +80,7 @@
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
-    if (animating) {
+    if (_animating) {
         [self spin];
     }
 }
