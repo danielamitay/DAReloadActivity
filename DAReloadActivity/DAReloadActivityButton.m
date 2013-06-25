@@ -18,8 +18,7 @@
 - (id)init
 {
     self = [super initWithFrame:CGRectMake(0, 0, 28, 28)];
-    if (self)
-    {
+    if (self) {
         self.showsTouchWhenHighlighted = YES;
         [self setBackgroundImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
     }
@@ -29,8 +28,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self)
-    {
+    if (self) {
         self.showsTouchWhenHighlighted = YES;
         [self setBackgroundImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
     }
@@ -40,8 +38,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    if (self)
-    {
+    if (self) {
         self.showsTouchWhenHighlighted = YES;
         [self setBackgroundImage:[UIImage imageNamed:@"reload"] forState:UIControlStateNormal];
     }
@@ -80,8 +77,7 @@
 
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
-    if (animating)
-    {
+    if (animating) {
         [self spin];
     }
 }
@@ -90,8 +86,7 @@
 
 - (CGFloat)animationDuration
 {
-    if (!_animationDuration)
-    {
+    if (!_animationDuration) {
         _animationDuration = 1.0f;
     }
     return _animationDuration;

@@ -38,18 +38,12 @@
 
 - (void)animate:(DAReloadActivityButton *)button
 {
-    if(button == navigationBarItem)
-    {
+    if(button == navigationBarItem) {
         [button spin];
-    }
-    else
-    {
-        if ([button isAnimating])
-        {
+    } else {
+        if ([button isAnimating]) {
             [button stopAnimating];
-        }
-        else
-        {
+        } else {
             [button startAnimating];
         }
     }
