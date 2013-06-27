@@ -16,7 +16,6 @@
 		63B780FF14E080280009EE1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B780FE14E080280009EE1F /* ViewController.m */; };
 		63B7810F14E0850F0009EE1F /* DAReloadActivityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B7810E14E0850F0009EE1F /* DAReloadActivityButton.m */; };
 		63B7811114E085290009EE1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B7811014E085290009EE1F /* QuartzCore.framework */; };
-		63B7811414E086990009EE1F /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B7811214E086990009EE1F /* reload.png */; };
 		63B7811514E086990009EE1F /* reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63B7811314E086990009EE1F /* reload@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +35,6 @@
 		63B7810D14E0850F0009EE1F /* DAReloadActivityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAReloadActivityButton.h; sourceTree = "<group>"; };
 		63B7810E14E0850F0009EE1F /* DAReloadActivityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAReloadActivityButton.m; sourceTree = "<group>"; };
 		63B7811014E085290009EE1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		63B7811214E086990009EE1F /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reload.png; sourceTree = "<group>"; };
 		63B7811314E086990009EE1F /* reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reload@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +110,6 @@
 			children = (
 				63B7810D14E0850F0009EE1F /* DAReloadActivityButton.h */,
 				63B7810E14E0850F0009EE1F /* DAReloadActivityButton.m */,
-				63B7811214E086990009EE1F /* reload.png */,
 				63B7811314E086990009EE1F /* reload@2x.png */,
 			);
 			name = DAReloadActivity;
@@ -171,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B780F614E080280009EE1F /* InfoPlist.strings in Resources */,
-				63B7811414E086990009EE1F /* reload.png in Resources */,
 				63B7811514E086990009EE1F /* reload@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
