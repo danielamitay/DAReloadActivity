@@ -12,6 +12,7 @@
 @implementation DAReloadActivityButton
 
 @synthesize animationDuration = _animationDuration;
+@synthesize animating = _animating;
 
 #pragma mark - Init Methods
 
@@ -49,6 +50,15 @@
 }
 
 #pragma mark - Public Methods
+
+- (void)setAnimating:(BOOL)animating {
+    _animating = animating;
+    if (_animating) {
+        [self startAnimating];
+    } else {
+        [self stopAnimating];
+    }
+}
 
 - (BOOL)isAnimating
 {

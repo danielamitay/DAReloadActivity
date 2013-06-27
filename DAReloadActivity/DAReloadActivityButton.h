@@ -9,12 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DAReloadActivityButton : UIButton
-{
-    BOOL _animating;
-}
-@property (nonatomic) CGFloat animationDuration;
 
-- (BOOL)isAnimating;
+@property (nonatomic) CGFloat animationDuration;
+@property (nonatomic, getter = isAnimating) BOOL animating;
+
 - (void)startAnimating;
 - (void)stopAnimating;
 - (void)spin;
